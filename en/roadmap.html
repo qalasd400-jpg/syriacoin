@@ -21,22 +21,46 @@ line-height:1.8;
 header{
 padding:20px;
 border-bottom:1px solid #333;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
 color:#d4af37;
-font-size:32px;
+font-size:34px;
 font-weight:bold;
 }
 
-nav{
-margin-top:15px;
+.menu-btn{
+font-size:30px;
+color:#d4af37;
+cursor:pointer;
 }
 
-nav a{
+#menu{
+display:none;
+position:absolute;
+top:75px;
+right:20px;
+background:#151515;
+padding:20px;
+border-radius:15px;
+width:250px;
+z-index:10;
+border:1px solid #333;
+}
+
+#menu a{
+display:block;
 color:#d4af37;
 text-decoration:none;
-margin:8px;
+padding:8px;
+}
+
+#menu a:hover{
+background:#222;
+border-radius:8px;
 }
 
 .container{
@@ -54,7 +78,50 @@ margin:20px 0;
 border-radius:15px;
 }
 
+.social{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+}
+
+.social a{
+background:#151515;
+color:#d4af37;
+padding:12px;
+border-radius:12px;
+text-decoration:none;
+border:1px solid #333;
+}
+
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid #333;
+margin-top:30px;
+}
+
+footer a{
+color:#d4af37;
+text-decoration:none;
+}
+
 </style>
+
+
+<script>
+
+function openMenu(){
+
+let menu=document.getElementById("menu");
+
+menu.style.display =
+menu.style.display==="block" ? "none" : "block";
+
+}
+
+</script>
+
 
 </head>
 
@@ -64,26 +131,36 @@ border-radius:15px;
 
 <header>
 
-<div class="logo">SyriaCoin</div>
+<div class="logo">
+SyriaCoin
+</div>
 
-<nav>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="roadmap.html">Roadmap</a>
-<a href="transparency.html">Transparency</a>
-<a href="distribution.html">Distribution</a>
-<a href="community.html">Community</a>
-<a href="team.html">Team</a>
+<div class="menu-btn" onclick="openMenu()">
+☰
+</div>
+
+
+<div id="menu">
+
+<a href="index.html">🏠 Home</a>
+<a href="who-we-are.html">👥 Who We Are</a>
+<a href="about.html">📄 About</a>
+<a href="roadmap.html">🛣 Roadmap</a>
+<a href="transparency.html">🔍 Transparency</a>
+<a href="distribution.html">🪙 Distribution</a>
+<a href="community.html">🌍 Community</a>
+<a href="team.html">👤 Team</a>
+<a href="contact.html">✉️ Contact</a>
+<a href="report.html">⚠️ Report</a>
+<a href="rights.html">©️ Rights</a>
+<a href="disclaimer.html">⚖️ Disclaimer</a>
+<a href="terms.html">📜 Terms</a>
 <a href="../roadmap.html">🇸🇦 العربية</a>
 
-</nav>
+</div>
 
-</header>
-
-
-
-<div class="container">
+</header><div class="container">
 
 
 <h1>SyriaCoin Roadmap</h1>
@@ -155,9 +232,65 @@ and contributors who help build SyriaCoin.
 
 
 
+<div class="box">
+
+<h2>🌐 Official Community Channels</h2>
+
+
+<div class="social">
+
+<a href="https://www.facebook.com/share/1D3H8oQbFH/" target="_blank">
+📘 Facebook
+</a>
+
+<a href="https://t.me/syriaacoin" target="_blank">
+📢 Telegram
+</a>
+
+<a href="https://t.me/syriacoinsy" target="_blank">
+👥 Telegram Group
+</a>
+
+<a href="https://discord.gg/ckbXrUXZ" target="_blank">
+🎮 Discord
+</a>
+
+<a href="https://x.com/Syriacoin_uppor" target="_blank">
+🐦 X
+</a>
+
+<a href="https://ig.me/j/AbbVy7J5YGpLrbNX/" target="_blank">
+📸 Instagram
+</a>
+
 </div>
+
+</div>
+
+
+</div>
+
+
+
+<footer>
+
+<p>
+© SyriaCoin - All Rights Reserved
+</p>
+
+<p>
+
+<a href="rights.html">Rights</a>
+|
+<a href="terms.html">Terms of Use</a>
+|
+<a href="disclaimer.html">Disclaimer</a>
+
+</p>
+
+</footer>
 
 
 </body>
 
-</html>
+  </html>
